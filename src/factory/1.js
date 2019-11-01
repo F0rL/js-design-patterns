@@ -1,5 +1,7 @@
 // 工厂模式
 // 将new操作单独封装
+// 构造函数和创建者分离
+// 开放封闭原则
 
 class Product {
   constructor(name) {
