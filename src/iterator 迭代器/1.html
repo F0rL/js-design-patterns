@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1">
+      <a href="#">a1</a>
+      <a href="#">a2</a>
+      <a href="#">a3</a>
+      <a href="#">a4</a>
+      <a href="#">a5</a>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script>
+      const arr = [1,2,3]
+      const nodeList = document.getElementsByTagName('a')
+      const $a = $('a')
+      // 遍历数组
+      arr.forEach(function(item) {
+        console.log(item)
+      })
+
+      // 遍历nodelist
+      for(let i = 0; i < nodeList.length; i++) {
+        console.log(nodeList[i])
+      }
+
+      // 遍历jquery对象
+      $a.each(function(key, elem){
+        console.log(key, elem)
+      })
+
+      function each(data) {
+        let $data = $(data)
+        $data.each(function(key, val){
+          console.log(key, val)
+        })
+      }
+
+      each(arr)
+      each(nodeList)
+      each($a)
+    </script>
+  </body>
+</html>
